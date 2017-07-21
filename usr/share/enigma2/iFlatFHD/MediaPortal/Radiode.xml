@@ -1,0 +1,34 @@
+<!-- Radiode -->
+<screen name="Radio.de" position="center,center" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="dateclock" />
+    <panel name="p_topbar" />
+    <panel name="p_bottombar" />
+    <panel name="p_centerbar1920" />
+    <panel name="p_color_labels" />
+    <panel name="0_690_1920_1" />
+    <panel name="30_115_900_1" />
+    <panel name="986_115_900_1" />
+    <panel name="960_61_1_628" />
+  <eLabel backgroundColor="background2" text="Radio.de" font="Regular; 42" halign="left" valign="center" position="15,6" size="1200,50" transparent="1" foregroundColor="foreground3" />
+  <eLabel text="Play" position="30,720" size="200,45" backgroundColor="background" transparent="1" font="Regular; 32" valign="top" />
+  <widget name="stationInfo" position="220,720" size="1480,90" backgroundColor="background" transparent="1" font="Regular; 32" valign="top" halign="left" />
+  <widget source="session.CurrentService" render="Label" position="1700,720" size="200,50" font="Regular; 32" backgroundColor="background2" halign="right" valign="top" transparent="1">
+    <convert type="MPServicePosition">Position</convert>
+  </widget>
+  <eLabel text="Info" position="30,860" size="200,45" backgroundColor="background" transparent="1" font="Regular; 32" valign="top" />
+  <widget name="stationDesc" position="220,860" zPosition="1" size="1480,90" backgroundColor="background" transparent="1" font="Regular; 32" halign="left" valign="top" />
+  <widget name="leftContentTitle" position="30,75" size="900,40" backgroundColor="background" zPosition="0" font="Regular; 28" halign="center" transparent="1" />
+  <widget name="liste" itemHeight="40" position="30,120" size="900,560" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" foregroundColorSelected="foreground3" />
+  <widget name="rightContentTitle" position="985,75" size="900,40" backgroundColor="background" zPosition="0" font="Regular; 30" halign="center" transparent="1" />
+  <widget name="playlist" itemHeight="40" position="985,120" size="900,560" backgroundColor="background" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" foregroundColorSelected="foreground3" />
+   <widget name="F1" position="15,1037" size="280,36" transparent="1" font="Regular; 26" backgroundColor="background2" valign="bottom" halign="center" zPosition="1" foregroundColor="foreground3" />
+  <widget name="F2" position="310,1037" size="280,36" transparent="1" font="Regular; 26" backgroundColor="background2" valign="bottom" halign="center" zPosition="1" foregroundColor="foreground3" />
+  <widget name="F3" position="605,1037" size="280,36" transparent="1" font="Regular; 26" backgroundColor="background2" valign="bottom" halign="center" zPosition="1" foregroundColor="foreground3" />
+  <widget name="F4" position="900,1037" size="280,36" transparent="1" font="Regular; 26" backgroundColor="background2" valign="bottom" halign="center" zPosition="1" foregroundColor="foreground3" />
+  <eLabel name="button bouquet" position="1689,1036" size="60,30" backgroundColor="button_mbgc" text="BOUQ" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button bouquet bg" position="1688,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button exit" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+</screen>

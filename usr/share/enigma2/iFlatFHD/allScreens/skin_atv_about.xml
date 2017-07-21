@@ -1,0 +1,89 @@
+<skin>
+	<screen flags="wfNoBorder" name="AboutOE" backgroundColor="transparent" position="0,0" size="1920,1080" title="About">    <constant-widget name="dateclock" />
+		<eLabel text="iFlatFHD" position="1272,295" size="335,75" font="Regular; 50" backgroundColor="background" transparent="1" foregroundColor="foreground" halign="center" />
+		<eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,753" size="335,55" text="support by - gordon55" transparent="1" valign="center" />
+		<eLabel position="15,6" size="900,50" text="About" backgroundColor="background2" font="Regular; 42" foregroundColor="foreground3" halign="left" transparent="1" />
+		<ePixmap alphatest="blend" pixmap="iFlatFHD/icons/nathanael.png" position="1374,461" size="120,120" transparent="1" zPosition="5" />
+		<widget name="FullAbout" position="30,75" size="900,930" font="Regular;30" halign="left" foregroundColor="foreground" backgroundColor="background" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" />
+		<eLabel name="DB" position="1252,263" size="375,562" zPosition="-10" backgroundColor="background" />
+		<eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,378" size="335,50" text="v5.2" transparent="1" valign="center" />
+		<eLabel text="Nathanael" position="1272,670" size="335,75" font="Regular; 50" backgroundColor="background" transparent="1" foregroundColor="foreground" halign="center" />
+		<eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,613" size="335,50" text="by" transparent="1" valign="center" />
+		<!-- /*Lines-->
+		<eLabel name="lab1" position="0,59" size="1920,1" zPosition="5" backgroundColor="line_u" />
+		<eLabel name="lab2" position="0,1020" size="1920,1" zPosition="5" backgroundColor="line_d" />
+		<!--Lines */-->
+		<!-- /*Uhr-->
+		<!--Uhr */-->
+		<panel name="p_color_labels" />
+		<widget source="key_red" render="Label" position="15,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget source="key_green" render="Label" position="310,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget source="key_yellow" render="Label" position="605,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget source="key_blue" render="Label" position="900,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<eLabel name="DB" position="0,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
+		<eLabel name="DB" position="0,57" size="960,966" zPosition="-10" backgroundColor="background" />
+		<eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
+		<eLabel name="DB" position="960,1018" size="960,5" zPosition="-10" backgroundColor="background" />
+		<eLabel name="DB" position="960,57" size="960,5" zPosition="-10" backgroundColor="background" />
+		<eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+		<eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+	</screen>
+	<screen flags="wfNoBorder" name="Devices" backgroundColor="transparent" position="0,0" size="1920,1080" title="Devices">    <constant-widget name="dateclock" />
+		<widget source="nims" render="Label" position="26,173" size="765,160" font="Regular; 27" transparent="1" zPosition="1" enableWrapAround="0" />
+		<widget source="HDDHeader" render="Label" position="26,412" size="765,40" font="Regular; 30" transparent="1" zPosition="1" />
+		<widget source="hdd" render="Label" position="26,464" size="765,160" font="Regular; 27" transparent="1" zPosition="1" enableWrapAround="0" />
+		<widget source="MountsHeader" render="Label" position="26,691" size="765,40" font="Regular; 30" transparent="1" zPosition="1" />
+		<widget source="mounts" render="Label" position="26,740" size="765,220" font="Regular; 27" transparent="1" zPosition="1" enableWrapAround="0" />
+		<eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,613" size="335,50" text="by" transparent="1" valign="center" />
+		<!-- /*Lines-->
+		<eLabel name="lab1" position="0,59" size="1920,1" zPosition="5" backgroundColor="line_u" />
+		<eLabel name="lab2" position="0,1020" size="1920,1" zPosition="5" backgroundColor="line_d" />
+		<!--Lines */-->
+		<!-- /*Uhr-->
+		<!--Uhr */-->
+		<eLabel name="DB" position="0,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
+		<eLabel name="DB" position="0,57" size="960,966" zPosition="-10" backgroundColor="background" />
+		<eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
+		<eLabel name="DB" position="960,1018" size="960,5" zPosition="-10" backgroundColor="background" />
+		<eLabel name="DB" position="960,57" size="960,5" zPosition="-10" backgroundColor="background" />
+		<eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+		<eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+	</screen>
+	<screen flags="wfNoBorder" name="SystemMemoryInfo" backgroundColor="transparent" position="0,0" size="1920,1080" title="Memory">
+		<widget source="Title" render="Label" font="Regular; 40" position="65,10" size="570,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="foreground3" backgroundColor="background2" />
+		<widget name="AboutScrollLabel" position="30,130" size="875,820" zPosition="1" itemHeight="75" font="Regular;30" scrollbarMode="showOnDemand" transparent="1" />
+		<eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+		<eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+		<!-- /*Lines-->
+		<eLabel name="lab1" position="0,59" size="1920,1" zPosition="5" backgroundColor="line_u" />
+		<eLabel name="lab2" position="0,1020" size="1920,1" zPosition="5" backgroundColor="line_d" />
+		<!--Lines */-->
+		<!-- /*Uhr-->
+		<!--Uhr */-->
+		<panel name="dateclock" />
+		<panel name="p_topbar" />
+		<panel name="p_bottombar" />
+		<panel name="p_centerbar1200" />
+	</screen>
+	<screen flags="wfNoBorder" name="SystemNetworkInfo" backgroundColor="transparent" position="0,0" size="1920,1080" title="Network Information">
+		<widget name="statuspic" position="214,130" size="91,40" pixmaps="iFlatFHD/icons/buttons/key_green.png,iFlatFHD/icons/buttons/key_grey.png" transparent="1" alphatest="blend" />
+		<widget source="Statustext" render="Label" position="30,130" size="180,40" font="Regular; 30" halign="right" backgroundColor="dark" transparent="1" />
+		<widget source="IFtext" render="Label" position="320,130" size="230,40" font="Regular; 30" halign="right" backgroundColor="dark" transparent="1" />
+		<widget source="IF" render="Label" position="558,130" size="230,40" font="Regular; 30" halign="left" transparent="1" backgroundColor="dark" zPosition="10" />
+		<eLabel position="30,200" size="740,1" backgroundColor="black" zPosition="0" />
+		<widget name="AboutScrollLabel" position="32,225" size="875,720" font="Regular;32" backgroundColor="dark" transparent="1" />
+		<widget source="Title" render="Label" font="Regular; 40" position="65,10" size="570,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="foreground3" backgroundColor="background2" />
+		<eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+		<eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+		<!-- /*Lines-->
+		<eLabel name="lab1" position="0,59" size="1920,1" zPosition="5" backgroundColor="line_u" />
+		<eLabel name="lab2" position="0,1020" size="1920,1" zPosition="5" backgroundColor="line_d" />
+		<!--Lines */-->
+		<!-- /*Uhr-->
+		<!--Uhr */-->
+		<panel name="dateclock" />
+		<panel name="p_topbar" />
+		<panel name="p_bottombar" />
+		<panel name="p_centerbar1200" />
+	</screen>
+</skin>

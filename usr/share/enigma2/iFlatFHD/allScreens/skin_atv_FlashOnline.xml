@@ -1,0 +1,30 @@
+ <skin>
+ <screen name="FlashOnline" position="0,0" size="1920,1080" title="Flash On	the	Fly" flags="wfNoBorder" backgroundColor="transparent">
+   <panel name="dateclock" />
+    <panel name="p_topbar" />
+    <panel name="p_bottombar" />
+    <panel name="p_centerbar1200" />
+    <panel name="p_color_labels" />
+    <eLabel text="FlashOnline" position="65,10" size="800,43" font="Regular;35" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="Title" render="Label" font="Regular; 40" position="237,291" size="570,43" transparent="1" halign="left" valign="center" zPosition="1" backgroundColor="background" />
+    <widget name="info-online" position="237,404" zPosition="1" size="550,50" font="Regular; 30" halign="left" valign="top" transparent="1" backgroundColor="background" />
+    <widget name="info-local" position="241,477" zPosition="1" size="550,45" font="Regular;	30" halign="left" valign="top" transparent="1" backgroundColor="background" />
+    <widget source="key_red" render="Label" position="15,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="key_green" render="Label" position="310,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="key_yellow" render="Label" position="605,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="key_blue" render="Label" position="900,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+   </screen>
+   <screen name="doFlashImage" position="0,0" size="1920,1080" title="Flash	On the fly (select a image)" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="dateclock" />
+    <panel name="p_topbar" />
+    <panel name="p_bottombar" />
+    <panel name="p_centerbar1200" />
+    <panel name="p_color_labels" />
+    <widget source="Title" render="Label" font="Regular; 40" position="65,10" size="570,43" transparent="1" halign="left" valign="center" zPosition="1" foregroundColor="foreground3" backgroundColor="background2" />
+    <widget name="imageList" position="80,150" zPosition="1" size="1076,800" font="Regular;30" itemHeight="45" scrollbarMode="showOnDemand" transparent="1" />
+    <widget source="key_red" render="Label" position="15,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="key_green" render="Label" position="310,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="key_yellow" render="Label" position="605,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="key_blue" render="Label" position="900,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+   </screen>   
+ </skin>

@@ -1,0 +1,18 @@
+<skin>
+
+
+	<screen name="IBUpdateWidget">
+     
+  
+<!-- /* Update Icon black -->
+<widget alphatest="blend" pixmap="iFlatFHD/icons/audio/update_black.png" position="1793,982" render="Pixmap" size="20,20" source="session.CurrentService" transparent="1" zPosition="5">
+    <convert type="ConfigEntryTest">config.usage.update_available,True,CheckSourceBoolean</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+<!-- Update Icon black */-->
+    
+    
+	</screen>
+
+
+</skin>

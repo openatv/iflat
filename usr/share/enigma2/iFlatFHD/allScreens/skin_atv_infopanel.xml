@@ -1,0 +1,43 @@
+<skin>
+	<screen flags="wfNoBorder" name="Infopanel" backgroundColor="transparent" position="0,0" size="1920,1080" title="Infopanel">    <constant-widget name="dateclock" />
+		 <widget name="Mlist" position="30,130" size="875,820" zPosition="1" itemHeight="75" font="Regular;30" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="label1" position="10,10" size="500,40" font="Regular;30" foregroundColor="white" halign="left" backgroundColor="background" valign="top" transparent="1" />
+		<!-- /*Lines-->
+		<eLabel name="lab1" position="0,59" size="1920,1" zPosition="5" backgroundColor="line_u" />
+		<eLabel name="lab2" position="0,1020" size="1920,1" zPosition="5" backgroundColor="line_d" />
+		<!--Lines */-->
+		<!-- /*Uhr-->
+		<!--Uhr */-->
+		<eLabel name="DB" position="0,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
+		<eLabel name="DB" position="0,57" size="960,966" zPosition="-10" backgroundColor="background" />
+		<eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
+		<eLabel name="DB" position="960,1018" size="960,5" zPosition="-10" backgroundColor="background" />
+		<eLabel name="DB" position="960,57" size="960,5" zPosition="-10" backgroundColor="background" />
+		<eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+		<eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+	</screen>
+	<screen flags="wfNoBorder" name="SoftcamPanel" backgroundColor="transparent" position="0,0" size="1920,1080" title="SoftcamPanel">    <constant-widget name="dateclock" />
+		<widget name="config" position="30,130" size="875,180" enableWrapAround="1" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" zPosition="1" transparent="1" />
+		<widget name="actifcam" font="Regular;30" position="30,324" size="525,48" halign="center" />
+		<widget name="actifcam2" font="Regular;30" position="30,376" size="525,48" halign="center" />
+		<widget name="ecminfo" font="Regular;30" position="30,442" size="875,500" />
+		<!-- /*Lines-->
+		<eLabel name="lab1" position="0,59" size="1920,1" zPosition="5" backgroundColor="line_u" />
+		<eLabel name="lab2" position="0,1020" size="1920,1" zPosition="5" backgroundColor="line_d" />
+		<!--Lines */-->
+		<!-- /*Uhr-->
+		<!--Uhr */-->
+		<panel name="p_color_labels" />
+		<widget source="key_red" render="Label" position="15,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget source="key_green" render="Label" position="310,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget source="key_yellow" render="Label" position="605,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget source="key_blue" render="Label" position="900,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<eLabel name="DB" position="0,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
+		<eLabel name="DB" position="0,57" size="960,966" zPosition="-10" backgroundColor="background" />
+		<eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
+		<eLabel name="DB" position="960,1018" size="960,5" zPosition="-10" backgroundColor="background" />
+		<eLabel name="DB" position="960,57" size="960,5" zPosition="-10" backgroundColor="background" />
+		<eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+		<eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+	</screen>
+</skin>

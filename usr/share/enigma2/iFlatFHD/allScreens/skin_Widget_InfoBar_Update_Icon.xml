@@ -1,0 +1,17 @@
+<skin>
+
+
+    <screen name="IBUpdateWidget">
+
+      <!-- /* Update  -->
+      <widget source="session.CurrentService" position="1742,985" size="65,10" render="FixedLabel" text=" " backgroundColor="green" zPosition="3">
+        <convert type="ConfigEntryTest">config.usage.update_available,True,CheckSourceBoolean</convert>
+        <convert type="ConditionalShowHide" />
+      </widget>
+      <!-- Update */-->
+
+    </screen>
+
+
+
+</skin>

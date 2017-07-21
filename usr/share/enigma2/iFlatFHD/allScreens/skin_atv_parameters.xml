@@ -1,0 +1,11 @@
+ <skin> 
+ <parameters>
+     <parameter name="PluginBrowserName" value="120,2,90" />
+    <parameter name="PluginBrowserDescr" value="120,35,26" />
+    <parameter name="PluginBrowserIcon" value="10,10,100,40" />
+    <parameter name="PluginBrowserDownloadName" value="80,2,35" />
+    <parameter name="PluginBrowserDownloadDescr" value="80,32,26" />
+    <!--plugin ipks-->
+    <parameter name="PluginBrowserDownloadIcon" value="10,0,60,50" />
+  </parameters> 
+  </skin>

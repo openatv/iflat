@@ -1,0 +1,39 @@
+<!--haupt_screen-->
+<screen name="MediaPortal" position="0,0" size="1920,1080" title="MediaPortal" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="dateclock" />
+    <panel name="p_topbar" />
+    <panel name="p_bottombar" />
+    <panel name="p_centerbar1920" />
+    <panel name="p_color_labels" />
+    <panel name="0_187_1920_1" />
+    <panel name="0_122_1920_1" />
+    <panel name="1435_189_1_830" />
+    <panel name="492_189_1_830" />
+    <panel name="965_189_1_830" />
+  <eLabel backgroundColor="background2" text="MediaPortal" font="Regular; 42" halign="left" valign="center" position="15,6" size="1200,50" transparent="1" foregroundColor="foreground3" />
+  <widget backgroundColor="background" foregroundColor="foreground" font="Regular; 40" halign="center" name="name" position="30,70" size="1864,50" transparent="1" />
+  <widget backgroundColor="background2" font="Regular; 26" valign="center" halign="center" name="red" position="15,1037" size="280,37" transparent="1" zPosition="1" foregroundColor="foreground3" />
+  <!--<widget backgroundColor="#20000000" font="Regular;25" valign="center" halign="center" name="green" position="385,1030" size="365,40" transparent="1" />
+  <widget backgroundColor="#20000000" font="Regular;25" valign="center" halign="center" name="yellow" position="755,1030" size="365,40" transparent="1" />
+  <widget backgroundColor="#20000000" font="Regular;25" valign="center" halign="center" name="blue" position="1125,1030" size="365,40" transparent="1" />
+  <widget backgroundColor="#20000000" font="Regular;50" foregroundColor="#00ffffff" halign="right" name="title" position="650,40" shadowColor="#00000000" shadowOffset="4,4" size="1200,60" transparent="1" />
+  -->
+  <widget backgroundColor="background" foregroundColor="foreground" font="Regular; 32" name="Mediatheken" position="30,135" size="450,45" transparent="1" />
+  <widget backgroundColor="background" foregroundColor="foreground" name="mediatheken" position="30,200" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" size="450,812" transparent="1" itemHeight="58" />
+  <widget backgroundColor="background" foregroundColor="foreground" font="Regular; 32" name="Grauzone" position="505,135" size="450,45" transparent="1" />
+  <widget backgroundColor="background" foregroundColor="foreground" name="grauzone" position="505,200" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" size="450,812" transparent="1" itemHeight="58" />
+  <widget backgroundColor="background" foregroundColor="foreground" font="Regular; 32" name="Funsport" position="977,135" size="450,45" transparent="1" />
+  <widget backgroundColor="background" foregroundColor="foreground" name="funsport" position="975,200" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" size="450,812" transparent="1" itemHeight="58" />
+  <widget backgroundColor="background" foregroundColor="foreground" font="Regular; 32" name="Porn" position="1445,135" size="450,45" transparent="1" />
+  <widget backgroundColor="background" foregroundColor="foreground" name="porn" position="1445,200" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" size="450,812" transparent="1" itemHeight="58" />
+  <eLabel name="button bouquet" position="1537,1036" size="60,30" backgroundColor="button_mbgc" text="BOUQ" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button bouquet bg" position="1536,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button info" position="1613,1036" size="60,30" backgroundColor="button_mbgc" text="INFO" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button info bg" position="1612,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button epg" position="1689,1036" size="60,30" backgroundColor="button_mbgc" text="EPG" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button epg bg" position="1688,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button help" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="HELP" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button help bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button exit" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+</screen>
