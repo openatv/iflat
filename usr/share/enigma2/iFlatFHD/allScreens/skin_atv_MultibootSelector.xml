@@ -1,0 +1,29 @@
+<skin>
+<screen name="MultiBootStartupOPT" position="0,0" size="1920,1080" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="dateclock" />
+		<panel name="p_topbar" />
+		<panel name="p_bottombar" />
+		<panel name="p_centerbar1300" />
+		<panel name="p_color_labels" />
+		<eLabel text="MultiBoot STARTUP Selector" position="15,6" size="900,50" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1"  />
+		<widget source="config" render="Label" position="230,190" size="700,40" halign="left" font="Regular; 30" foregroundColor="foreground3" backgroundColor="background2" />
+       <widget source="options" render="Label" position="230,250" size="700,40" halign="left" font="Regular; 30" foregroundColor="foreground3" backgroundColor="background2" />
+    	<eLabel name="button lr" position="933,194" size="60,30" text="L / R" font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
+  		<eLabel name="button lire bg" position="932,193" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  		<eLabel name="button hr" position="933,254" size="60,30" text="H / R" font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
+  		<eLabel name="button horu bg" position="932,253" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+    	<widget name="description" position="228,605" size="751,56" font="Regular; 25" halign="left" foregroundColor="foreground2" backgroundColor="background3" valign="center" />
+		<eLabel name="button lr" position="1581,1036" size="60,30" text="L / R" font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
+  		<eLabel name="button lire bg" position="1580,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  		<eLabel name="button hr" position="1668,1036" size="60,30" text="H / R" font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
+  		<eLabel name="button horu bg" position="1667,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  		<eLabel name="button info" position="1755,1036" size="60,30" text="INFO " font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
+  		<eLabel name="button inf bg" position="1754,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  		<eLabel name="button ext" position="1843,1036" size="60,30" text="EXIT " font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
+  		<eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+		<widget source="key_red" render="Label" position="15,1037" size="280,36" zPosition="1" font="Regular;26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget source="key_green" render="Label" position="295,1037" size="310,36" zPosition="1" font="Regular;26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget source="key_yellow" render="Label" position="605,1037" size="280,36" zPosition="1" font="Regular;26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget name="key_blue" render="Label" position="900,1037" size="280,36" zPosition="1" font="Regular;26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+	</screen>
+	</skin>
