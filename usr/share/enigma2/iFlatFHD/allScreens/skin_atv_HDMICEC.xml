@@ -1,0 +1,18 @@
+<skin>
+	 <screen name="HdmiCECSetupScreen" position="0,0" size="1920,1080" title="HDMI CEC setup" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="dateclock" />
+    <panel name="p_topbar" />
+    <panel name="p_bottombar" />
+    <panel name="p_centerbar960" />
+    <panel name="p_color_labels" />
+    <panel name="0_945_960_1" />
+    <widget source="Title" render="Label" font="Regular; 42" position="15,6" size="800,43" transparent="1" halign="left" valign="center" zPosition="1" backgroundColor="background2" foregroundColor="foreground3" />
+    <widget name="config" font="Regular; 30" itemHeight="35" position="35,120" size="900,865" transparent="1" />
+    <widget source="current_address" render="Label" position="170,890" size="477,65" zPosition="10" font="Regular;	30" halign="left" valign="center" foregroundColor="foreground3" transparent="1" backgroundColor="background2" />
+    <widget source="fixed_address" render="Label" position="170,970" size="477,58" zPosition="10" font="Regular;	30" halign="left" valign="center" foregroundColor="foreground" transparent="1" backgroundColor="background" />
+    <widget source="key_red" render="Label" position="15,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="key_green" render="Label" position="310,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="key_yellow" render="Label" position="605,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <widget source="key_blue" render="Label" position="900,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  </screen>
+ </skin>
