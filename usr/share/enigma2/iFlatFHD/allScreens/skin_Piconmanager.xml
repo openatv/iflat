@@ -1,0 +1,57 @@
+<skin>
+<screen name="PiconManagerScreen" position="0,0" size="1920,1080" title="Picon Manager" flags="wfNoBorder" backgroundColor="transparent">
+  <widget source="Title" render="Label" position="16,6" size="900,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
+  <widget name="piconpath" position="30,75" size="250,40" font="Regular; 28" foregroundColor="foreground2" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="piconpath2" position="280,75" size="500,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="piconspace" position="30,330" size="400,40" font="Regular; 25" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="piconcount" position="915,330" size="400,40" font="Regular; 25" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="picondownload" position="472,330" size="400,40" font="Regular; 25" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="piconerror" position="1358,330" size="400,40" font="Regular; 26" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="selectedname" position="875,75" size="250,40" font="Regular; 28" foregroundColor="foreground2" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="selected" position="1125,75" size="370,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="spiconname" position="30,130" size="250,40" font="Regular; 28" foregroundColor="foreground2" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="spicon" position="280,130" size="400,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="creatorname" position="875,130" size="250,40" font="Regular; 28" foregroundColor="foreground2" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="creator" position="1125,130" size="300,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="sizename" position="30,180" size="250,40" font="Regular; 28" foregroundColor="foreground2" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="size" position="280,180" size="400,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="bitname" position="877,180" size="250,40" font="Regular; 28" foregroundColor="foreground2" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="bit" position="1125,180" size="300,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="5" halign="left" />
+  <widget name="piconslidername" position="480,325" size="0,0" font="Regular;20" foregroundColor="foreground" transparent="1" zPosition="5" halign="left" />
+  <widget name="piconslider" position="30,381" size="1860,5" zPosition="1" foregroundColor="progress" transparent="1" />
+  <widget name="picon" position="1495,75" size="400,240" zPosition="4" transparent="1" alphatest="blend" />
+  <widget name="list" backgroundColor="background" foregroundColor="foreground" position="30,400" size="1860,602" zPosition="2" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" />
+  <eLabel backgroundColor="white" name="new eLabel" position="30,383" size="1860,1" />
+  <widget name="key_red" position="15,1037" size="280,36" zPosition="1" font="Regular;26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <widget name="key_green" position="310,1037" size="280,36" zPosition="1" font="Regular;26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <widget name="key_yellow" position="605,1037" size="280,36" zPosition="1" font="Regular;26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <widget name="key_blue" position="900,1037" size="280,36" zPosition="1" font="Regular;26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <!-- /*Lines-->
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/1920.png" position="0,324" size="1920,1" zPosition="5" />
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,1019" size="1920,3" zPosition="5" />
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/1920.png" position="0,365" size="1920,1" zPosition="5" />
+  <ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/line_ud.png" position="0,58" size="1920,3" zPosition="5" />
+  <!--Lines */-->
+  <!-- /*Uhr-->
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 42" halign="right" position="1704,6" render="Label" size="200,50" source="global.CurrentTime" transparent="1" valign="center">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" position="1327,18" render="Label" size="450,37" source="global.CurrentTime" transparent="1" valign="center" halign="right">
+    <convert type="ClockToText">Format:%A, %d. %B %Y</convert>
+  </widget>
+  <!--Uhr */-->
+  <eLabel name="button_red" position="15,1070" size="280,4" backgroundColor="button_red" zPosition="1" />
+  <eLabel name="button_green" position="310,1070" size="280,4" backgroundColor="button_green" zPosition="1" />
+  <eLabel name="button_yellow" position="605,1070" size="280,4" backgroundColor="button_yellow" zPosition="1" />
+  <eLabel name="button_blue" position="900,1070" size="280,4" backgroundColor="button_blue" zPosition="1" />
+  <eLabel name="DB" position="0,1023" size="1920,57" zPosition="-10" backgroundColor="background2" />
+  <eLabel name="DB" position="0,56" size="1920,967" zPosition="-10" backgroundColor="background" />
+  <eLabel name="DB" position="0,0" size="1920,57" zPosition="-10" backgroundColor="background2" />
+  <eLabel name="button menu" position="1689,1036" size="60,30" backgroundColor="button_mbgc" text="MENU" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button menu bg" position="1688,1035" size="62,32" backgroundColor="button_mbgc" zPosition="0" />
+  <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button exit" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+</screen>
+</skin>
