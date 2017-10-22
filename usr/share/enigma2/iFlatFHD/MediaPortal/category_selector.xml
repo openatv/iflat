@@ -1,12 +1,12 @@
 <!-- category_selector -->
 <screen name="CategorySelector" position="center,center" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
-  <widget name="F1" position="466,197" size="350,38" transparent="1" font="Regular; 27" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
-  <widget name="F2" position="466,245" size="350,38" transparent="1" font="Regular; 27" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
-  <widget name="F3" position="466,293" size="350,38" transparent="1" font="Regular; 27" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
-  <widget name="F4" position="466,341" size="350,38" transparent="1" font="Regular; 27" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
-  <widget name="F5" position="466,389" size="350,38" transparent="1" font="Regular; 27" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
-  <widget name="F6" position="466,437" size="350,38" transparent="1" font="Regular; 27" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
-  <widget name="F7" position="466,485" size="350,38" transparent="1" font="Regular; 27" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F1" position="441,197" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F2" position="441,245" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F3" position="441,293" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F4" position="441,341" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F5" position="441,389" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F6" position="441,437" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F7" position="441,485" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
   <eLabel name="DB" position="410,115" backgroundColor="background2" size="460,5" />
   <eLabel name="DB" position="410,590" backgroundColor="background2" size="460,5" />
   <eLabel name="DB" position="410,120" backgroundColor="background2" size="5,470" />

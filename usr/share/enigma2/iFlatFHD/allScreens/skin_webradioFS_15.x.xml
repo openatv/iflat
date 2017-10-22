@@ -125,7 +125,7 @@
   <widget source="Title" render="Label" position="15,6" size="1100,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
   <widget name="config" itemHeight="40" font="Regular;28" secondfont="Regular;28" position="30,75" zPosition="3" size="1180,765" backgroundColor="background" foregroundColor="foreground" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" />
   <widget source="playtext" render="Label" position="30,918" zPosition="2" size="1180,100" font="Regular; 30" valign="center" halign="center" foregroundColor="foreground" backgroundColor="background" transparent="0" />
-  <widget name="rec_txt" position="30,879" size="1180,30" font="Regular; 26" halign="center" valign="center" zPosition="2" backgroundColor="background" transparent="1" />--&gt;
+  <widget name="rec_txt" position="30,879" size="1180,30" font="Regular; 26" halign="center" valign="center" zPosition="2" backgroundColor="background" transparent="1" />
   <widget name="key_red" position="15,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" backgroundColor="background2" transparent="1" valign="bottom" foregroundColor="foreground3" />
   <widget name="key_green" position="310,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" backgroundColor="background2" transparent="1" foregroundColor="foreground3" valign="bottom" />
   <widget name="key_yellow" position="605,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" backgroundColor="background2" transparent="1" foregroundColor="foreground3" valign="bottom" />

@@ -1,4 +1,4 @@
-  <!-- Skin iFlatFHD_v5.0 by Nathanael-supportet by @gordon55 for VTi v11.x -->
+  <!-- Skin iFlatFHD_v5.4 by Nathanael-supportet by @gordon55 for VTi v11.x -->
 
 <skin>
   <windowstyle id="0" type="skinned">
@@ -28,11 +28,10 @@
     <color name="ThumbViewTextForeground" color="foreground" />
     <overridefont font="Regular" />
 		<overridefontsize value="28" />
+		<overridesizefactor value="5" />
 	</mediaportal>
        
 </skin>
-
-
 
 
 

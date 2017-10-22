@@ -6,7 +6,7 @@
 		<ePixmap alphatest="blend" pixmap="iFlatFHD/icons/nathanael.png" position="1374,461" size="120,120" transparent="1" zPosition="5" />
 		<widget name="FullAbout" position="30,75" size="900,930" font="Regular;30" halign="left" foregroundColor="foreground" backgroundColor="background" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" />
 		<eLabel name="DB" position="1252,263" size="375,562" zPosition="-10" backgroundColor="background" />
-		<eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,378" size="335,50" text="v5.3" transparent="1" valign="center" />
+		<eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,378" size="335,50" text="v5.4" transparent="1" valign="center" />
 		<eLabel text="Nathanael" position="1272,670" size="335,75" font="Regular; 50" backgroundColor="background" transparent="1" foregroundColor="foreground" halign="center" />
 		<eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,613" size="335,50" text="by" transparent="1" valign="center" />
 		<!-- /*Lines-->
