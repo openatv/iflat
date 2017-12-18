@@ -1,6 +1,6 @@
 <skin>
-  <!-- Skin iFlatFHD_v5.4 by Nathanael for VTi v11.x -->
-  <!-- 21.10.17 -->
+  <!-- Skin iFlatFHD_v5.6 by Nathanael for VTi v11.x -->
+  <!-- 08.12.17 -->
   <!-- Picons 220x132 -->
   <!-- Font Licence HandelGotD by LoSoS -->
   <!-- You can modify and redistribute it as long as you keep this license and the original author for the skin and all of your modifications -->
@@ -37,6 +37,7 @@
     <alias name="PluginBrowser1" font="Regular" size="25" />
     <alias name="SelectionList" font="Regular" size="28" height="40" />
     <alias name="ServiceInfo" font="Regular" size="30" height="50" />
+    <alias name="SimpleListFont" font="Regular" size="28" height="45" />
     <alias name="TimerListFont1" font="Regular" size="32" height="100" />
     <alias name="TimerListFont2" font="Regular" size="28" />
     <alias name="VirtualKeyboard" font="Regular" size="35" height="50" />
@@ -426,6 +427,10 @@
     <parameter name="SelectionListFont" value="Regular;28" />
     <parameter name="SelectionListItemHeight" value="40" />
     <parameter name="SelectionListIcon" value="10,4,26,26" />
+    <!-- Simplelist -->
+    <parameter name="SimpleListDash" value="0,36,900,30" />
+    <parameter name="SimpleListName" value="50,2,900,36" />
+    <parameter name="SimpleListIcon" value="10,5,35,35" />
     <!-- TimerList -->
     <parameter name="TimerListFont1" value="Regular;32" /> <!-- Font Titel -->
     <parameter name="TimerListFont2" value="Regular;28" /> <!-- Font Sender -->
@@ -1722,7 +1727,7 @@ self.instance.resize(eSize(*wsize))
     <ePixmap alphatest="blend" pixmap="iFlatFHD/icons/nathanael.png" position="1374,461" size="120,120" transparent="1" zPosition="5" />
     <widget name="FullAbout" position="30,75" size="900,930" font="Regular;30" halign="left" foregroundColor="foreground" backgroundColor="background" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" />
     <eLabel name="DB" position="1252,263" size="375,562" zPosition="-10" backgroundColor="background" />
-    <eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,378" size="335,50" text="v5.4" transparent="1" valign="center" />
+    <eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,378" size="335,50" text="v5.6" transparent="1" valign="center" />
     <eLabel text="Nathanael" position="1272,670" size="335,75" font="Regular; 50" backgroundColor="background" transparent="1" foregroundColor="foreground" halign="center" />
     <eLabel backgroundColor="background" font="Regular; 28" halign="center" position="1272,613" size="335,50" text="by" transparent="1" valign="center" />
     <eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
@@ -1752,12 +1757,14 @@ self.instance.resize(eSize(*wsize))
     <panel name="p_centerbar1200" />
     <panel name="p_color_labels" />
     <widget source="Title" render="Label" position="15,6" size="1200,50" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
-    <widget name="config" backgroundColor="background" foregroundColor="foreground" position="30,75" size="1140,940" itemHeight="40" font="Regular;28" secondfont="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" />
+    <widget name="config" backgroundColor="background" foregroundColor="foreground" descriptionColor="descript" position="30,75" size="1140,880" itemHeight="40" font="Regular;28" secondfont="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" />
     <widget name="buttonred" position="15,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget name="buttongreen" position="310,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget name="buttonyellow" position="605,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
     <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+    <eLabel name="button ch+-" position="1768,1036" size="60,30" backgroundColor="button_mbgc" text="CH +/- " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button ch+- bg" position="1767,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
   </screen>
   
   <screen name="AutoShutDownFile" position="0,0" size="1920,1080" title="Select a media file for AutoShutDown" flags="wfNoBorder" backgroundColor="transparent">
@@ -2459,7 +2466,7 @@ self.instance.resize(eSize(*wsize))
     <panel name="p_centerbar960" />
     <panel name="p_color_labels" />
     <eLabel text="help..." position="15,6" size="900,50" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
-    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" zPosition="10" alphatest="blend" />
     <widget name="list" backgroundColor="background" foregroundColor="foreground" position="265,75" size="650,920" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="/usr/share/enigma2/skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="/usr/share/enigma2/skin_default/arrowdown.png" zPosition="11" alphatest="on" />
@@ -2535,28 +2542,28 @@ self.instance.resize(eSize(*wsize))
   </screen>
   
   <screen name="LocationBox" position="0,0" size="1920,1080" title="Location Box" flags="wfNoBorder" backgroundColor="transparent">
-    <panel name="dateclock" />
-    <panel name="p_topbar" />
-    <panel name="p_bottombar" />
-    <panel name="p_centerbar960" />
-    <panel name="p_color_labels" />
-    <panel name="0_945_960_1" />
-    <panel name="0_540_960_1" />
-    <widget source="Title" render="Label" position="15,6" size="900,50" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
-    <widget name="text" position="30,952" size="900,66" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" valign="center" halign="center" />
-    <widget name="target" position="30,75" size="900,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" />
-    <widget name="filelist" font="Regular; 28" backgroundColor="background" foregroundColor="foreground" position="30,120" size="900,330" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" selectionDisabled="1" />
-    <widget name="textbook" position="30,555" size="900,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" halign="left" />
-    <widget name="booklist" backgroundColor="background" foregroundColor="foreground" font="Regular; 28" position="30,605" size="900,330" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" />
-    <widget name="key_red" position="15,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
-    <widget name="key_green" position="310,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
-    <widget name="key_yellow" position="605,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
-    <widget name="key_blue" position="900,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
-    <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
-    <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
-    <eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
-    <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
-  </screen>
+  <panel name="dateclock" />
+  <panel name="p_topbar" />
+  <panel name="p_bottombar" />
+  <panel name="p_centerbar960" />
+  <panel name="p_color_labels" />
+  <panel name="0_945_960_1" />
+  <panel name="0_540_960_1" />
+  <widget source="Title" render="Label" position="15,6" size="900,50" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <widget name="text" position="30,952" size="900,66" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" valign="center" halign="center" />
+  <widget name="target" position="30,75" size="900,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget name="filelist" font="Regular; 28" backgroundColor="background" foregroundColor="foreground" position="30,120" size="900,400" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" selectionDisabled="1" />
+  <widget name="textbook" position="30,555" size="900,40" font="Regular; 28" foregroundColor="foreground" backgroundColor="background" transparent="1" halign="left" />
+  <widget name="booklist" backgroundColor="background" foregroundColor="foreground" font="Regular; 28" position="30,605" size="900,320" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" />
+  <widget name="key_red" position="15,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <widget name="key_green" position="310,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <widget name="key_yellow" position="605,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <widget name="key_blue" position="895,1037" size="290,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+</screen>
   
   <screen name="MediaPlayer" position="0,0" size="1920,1080" title="MediaPlayer" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="dateclock" />
@@ -2759,26 +2766,26 @@ self.instance.resize(eSize(*wsize))
     <convert type="MovieInfo">FileSize</convert>
   </widget>
   <widget name="list" position="30,125" size="1200,700" foregroundColor="foreground" backgroundColor="background" transparent="1" UnwatchedColor="movie_unwatched" WatchingColor="movie_watching" FinishedColor="movie_finished" RecordingColor="movie_recording" SelectedColor="movie_selected" ScrambledColor="movie_scrambled" enableWrapAround="1" scrollbarMode="showNever" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" />
-  <widget source="Title" position="30,75" size="1200,40" render="Label" font="Regular; 28" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget source="Title" position="30,830" size="1200,40" render="Label" font="Regular; 28" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" />
   <widget source="Service" position="30,880" size="1200,130" alphatest="blend" render="VRunningText" options="movetype=running,startpoint=0,direction=top,steptime=95,repeat=2,startdelay=8000,wrap" font="Regular;28" foregroundColor="foreground" backgroundColor="transparent" valign="top">
     <convert type="EventName">ExtendedDescription</convert>
   </widget>
   <widget source="Service" position="1290,775" size="590,70" render="Label" font="Regular; 28" halign="center" foregroundColor="foreground" backgroundColor="background" transparent="1">
-  <convert type="MovieInfo">ShortDescription</convert>
-</widget>
+    <convert type="MovieInfo">ShortDescription</convert>
+  </widget>
   <widget source="Service" position="1350,125" size="470,620" render="Cover" backgroundColor="background" transparent="1" alphatest="blend" zPosition="4" />
-  <widget name="freeDiskSpace" position="30,836" size="1200,40" font="Regular; 25" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" />
-
-	<widget name="key_red" position="15,1023" size="280,47" font="Regular; 22" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="1" />
-	<widget name="key_green" position="310,1023" size="280,47" font="Regular; 22" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="1" />
-	<widget name="key_yellow" position="605,1023" size="280,47" font="Regular; 22" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="1" />
-	<widget name="key_blue" position="900,1023" size="280,47" font="Regular; 22" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="1" />
-
+  <widget name="freeDiskSpace" position="333,16" size="900,40" font="Regular; 25" halign="right" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget name="key_red" position="15,1023" size="280,47" font="Regular; 22" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="1" />
+  <widget name="key_green" position="310,1023" size="280,47" font="Regular; 22" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="1" />
+  <widget name="key_yellow" position="605,1023" size="280,47" font="Regular; 22" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="1" />
+  <widget name="key_blue" position="900,1023" size="280,47" font="Regular; 22" halign="center" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" zPosition="1" />
   <eLabel name="button menu" position="1689,1036" size="60,30" text="MENU" font="Regular; 17" halign="center" valign="center" backgroundColor="background" zPosition="1" transparent="1" />
   <eLabel name="button OK" position="1766,1036" size="60,30" text="OK" font="Regular; 17" halign="center" valign="center" backgroundColor="background" zPosition="1" transparent="1" />
   <eLabel name="button ext" position="1843,1036" size="60,30" text="EXIT " font="Regular; 17" halign="center" valign="center" backgroundColor="background" zPosition="1" transparent="1" />
   <eLabel name="button help" position="1613,1036" size="60,30" text="HELP" font="Regular; 17" halign="center" valign="center" backgroundColor="background" zPosition="1" transparent="1" />
   <eLabel name="button epg" position="1538,1036" size="60,30" text="EPG" font="Regular; 17" halign="center" valign="center" backgroundColor="background" transparent="1" zPosition="1" />
+  <eLabel name="button ch+-" position="1463,1036" size="60,30" backgroundColor="button_mbgc" text="CH +/- " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button ch+- bg" position="1462,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
   <eLabel name="button epg bg" position="1537,1035" size="62,1" backgroundColor="button_mbg" zPosition="0" />
   <eLabel name="button epg bg" position="1537,1066" size="62,1" backgroundColor="button_mbg" zPosition="0" />
   <eLabel name="button epg bg" position="1537,1035" size="1,32" backgroundColor="button_mbg" zPosition="0" />
@@ -2799,6 +2806,11 @@ self.instance.resize(eSize(*wsize))
   <eLabel name="button ext bg" position="1842,1066" size="62,1" backgroundColor="button_mbg" zPosition="0" />
   <eLabel name="button ext bg" position="1842,1035" size="1,32" backgroundColor="button_mbg" zPosition="0" />
   <eLabel name="button ext bg" position="1903,1035" size="1,32" backgroundColor="button_mbg" zPosition="0" />
+  <widget name="ServicePath" position="30,63" size="1200,53" font="Regular; 24" backgroundColor="background" valign="center" halign="left" transparent="1" />
+  <!--<widget name="key_red_long" position="1545,729" size="300,66" foregroundColor="foreground3" zPosition="1" font="Regular;26" halign="center" valign="top" backgroundColor="background2" transparent="1" />
+  <widget name="key_green_long" position="1545,804" size="300,66" foregroundColor="foreground3" zPosition="1" font="Regular;26" halign="center" valign="top" backgroundColor="background2" transparent="1" />
+  <widget name="key_yellow_long" position="1545,879" size="300,66" foregroundColor="foreground3" zPosition="1" font="Regular;26" halign="center" valign="top" backgroundColor="background2" transparent="1" />
+  <widget name="key_blue_long" position="1545,954" size="300,66" foregroundColor="foreground3" zPosition="1" font="Regular;26" halign="center" valign="top" backgroundColor="background2" transparent="1" />-->
 </screen>
   
   <screen name="MovieContextMenu" position="0,0" size="1920,1080" title="Movielist menu" flags="wfNoBorder" backgroundColor="transparent">
@@ -3308,21 +3320,6 @@ self.instance.resize(eSize(*wsize))
     <eLabel position="20,218" size="640,5" zPosition="-10" backgroundColor="background" />
   </screen>
   
-  <screen name="NumericalTextInputHelpDialog" position="1180,700" size="740,225" backgroundColor="black" flags="wfNoBorder" zPosition="8">
-    <widget font="Regular;28" halign="center" name="help1" position="5,170" size="210,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key0" position="220,170" size="300,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="help2" position="525,170" size="210,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key1" position="5,5" size="210,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key2" position="220,5" size="300,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key3" position="525,5" size="210,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key4" position="5,60" size="210,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key5" position="220,60" size="300,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key6" position="525,60" size="210,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key7" position="5,115" size="210,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key8" position="220,115" size="300,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-    <widget font="Regular;28" halign="center" name="key9" position="525,115" size="210,50" valign="center" foregroundColor="foreground3" backgroundColor="background4" />
-  </screen>
-  
   <screen name="OpenWebifConfig" position="0,0" size="1920,1080" title="OpenWebiF Configuration" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="dateclock" />
     <panel name="p_topbar" />
@@ -3599,6 +3596,8 @@ self.instance.resize(eSize(*wsize))
   <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
   <eLabel name="button ext" position="1843,1036" size="60,30" text="EXIT " font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
   <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button ch+-" position="1768,1036" size="60,30" backgroundColor="button_mbgc" text="CH +/- " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button ch+- bg" position="1767,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
 </screen>
 
   <screen name="SimpleChannelSelection" position="0,0" size="1920,1080" title="Channel Selection" backgroundColor="transparent" flags="wfNoBorder">
@@ -4251,18 +4250,33 @@ self['config'].l.setSeperation(400)
   <eLabel position="15,6" size="1100,50" text="Virtual KeyBoard" font="Regular; 42" halign="left" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
   <widget name="header" position="30,952" size="900,66" font="Regular; 28" halign="center" noWrap="1" foregroundColor="foreground" backgroundColor="background" transparent="1" />
   <widget name="text" position="40,130" size="880,100" font="Regular; 40" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="0" zPosition="3" />
-  <widget name="list" position="90,349" size="780,300" foregroundColor="white" backgroundColor="background" transparent="0" zPosition="3" selectionDisabled="1" />
+  <widget name="list" position="90,299" size="780,300" foregroundColor="white" backgroundColor="background" transparent="0" zPosition="3" selectionDisabled="1" />
   <widget source="country" render="Label" position="605,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" zPosition="1" />
   <widget source="country" render="Pixmap" position="828,1025" size="57,42" alphatest="blend" borderWidth="0" borderColor="white">
     <convert type="ValueToPixmap">LanguageCode</convert>
   </widget>
   <eLabel position="39,129" size="882,102" backgroundColor="line_s" zPosition="2" />
-  <eLabel position="85,345" size="790,310" backgroundColor="background" zPosition="2" />
-  <eLabel position="84,344" size="792,312" backgroundColor="line_s" zPosition="1" />
+  <eLabel position="85,295" size="790,310" backgroundColor="background" zPosition="2" />
+  <eLabel position="84,294" size="792,312" backgroundColor="line_s" zPosition="1" />
   <eLabel name="button OK" position="1766,1036" size="60,30" text="OK" font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
   <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
   <eLabel name="button ext" position="1843,1036" size="60,30" text="EXIT " font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
   <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+</screen>
+
+<screen name="NumericalTextInputHelpDialogVKB" position="114,675" size="738,210" backgroundColor="white" flags="wfNoBorder" zPosition="8">
+  <widget font="Regular;28" halign="center" name="help1" position="2,158" size="215,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key0" position="219,158" size="300,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="help2" position="521,158" size="215,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key1" position="2,2" size="215,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key2" position="219,2" size="300,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key3" position="521,2" size="215,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key4" position="2,54" size="215,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key5" position="219,54" size="300,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key6" position="521,54" size="215,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key7" position="2,106" size="215,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key8" position="219,106" size="300,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
+  <widget font="Regular;28" halign="center" name="key9" position="521,106" size="215,50" valign="center" foregroundColor="foreground" backgroundColor="background1" />
 </screen>
 
   <screen name="InputDeviceSelection" flags="wfNoBorder" backgroundColor="transparent" position="0,0" size="1920,1080" title="Select input device">
@@ -4353,7 +4367,7 @@ self['config'].l.setSeperation(400)
     <panel name="p_color_labels" />
     <panel name="0_250_960_1" />
     <eLabel text="CleanupWizard" position="15,6" size="900,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
-    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -4493,7 +4507,7 @@ self['config'].l.setSeperation(400)
     <panel name="p_color_labels" />
     <panel name="0_250_960_1" />
     <eLabel text="ImageWizard" position="15,6" size="900,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
-    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -4527,7 +4541,7 @@ self['config'].l.setSeperation(400)
     <panel name="p_color_labels" />
     <panel name="0_250_960_1" />
     <eLabel text="LanguageWizard" position="15,6" size="900,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
-    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -4563,7 +4577,7 @@ self['config'].l.setSeperation(400)
 
 		<eLabel text="Wizard" position="15,6" size="900,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
 
-		<widget name="rc" position="30,360" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" zPosition="10" alphatest="blend" />
+		<widget name="rc" position="30,360" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" zPosition="10" alphatest="blend" />
 		<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
 		<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -4601,7 +4615,7 @@ self['config'].l.setSeperation(400)
     <panel name="p_color_labels" />
     <panel name="0_250_960_1" />
     <eLabel text="StartWizard" position="15,6" size="900,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
-    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -4635,7 +4649,7 @@ self['config'].l.setSeperation(400)
     <panel name="p_color_labels" />
     <panel name="0_250_960_1" />
     <eLabel text="VideoWizard" position="15,6" size="900,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
-    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png" zPosition="10" alphatest="blend" />
+    <widget name="rc" position="30,260" size="194,540" pixmaps="skin_default/rc_vu_1.png,skin_default/rc_vu_2.png,skin_default/rc_vu_3.png,skin_default/rc_vu_4.png,skin_default/rc_vu_5.png" zPosition="10" alphatest="blend" />
     <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
     <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
@@ -6548,6 +6562,45 @@ self['config'].l.setSeperation(400)
   <eLabel name="button ext" position="1843,1036" size="60,30" text="EXIT " font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
   <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
 </screen>
+
+<screen backgroundColor="transparent" flags="wfNoBorder" name="SimpleList" position="0,0" size="1920,1080" title="Simple List">
+  <panel name="dateclock" />
+  <panel name="p_topbar" />
+  <panel name="p_bottombar" />
+  <panel name="p_centerbar960" />
+  <panel name="p_color_labels" />
+  <panel name="0_860_960_1" />
+  <eLabel position="15,6" size="900,50" text="Please choose." font="Regular; 42" halign="left" valign="center" foregroundColor="foreground3" backgroundColor="background2" zPosition="1" transparent="1" />
+  <widget backgroundColor="background" font="Regular; 25" halign="center" name="text" position="30,867" size="900,150" transparent="1" foregroundColor="foreground" valign="top" />
+  <widget name="list" font="Regular; 28" itemHeight="40" backgroundColor="background" foregroundColor="foreground" enableWrapAround="1" position="30,75" scrollbarMode="showOnDemand" size="900,760" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" />
+  <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <widget name="key_red" position="15,1037" size="280,37" zPosition="1" font="Regular; 26" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" valign="bottom" />
+  <widget name="key_green" position="310,1037" size="280,37" zPosition="1" font="Regular; 26" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" valign="bottom" />
+  <widget name="key_yellow" position="605,1037" size="280,37" zPosition="1" font="Regular; 26" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" valign="bottom" />
+  <widget name="key_blue" position="900,1037" size="280,37" zPosition="0" font="Regular; 26" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" valign="bottom" />
+</screen>
+
+<screen name="TagEditor" position="0,0" size="1920,1080" backgroundColor="transparent" title="Tag Editor" flags="wfNoBorder">
+  <panel name="dateclock" />
+  <panel name="p_topbar" />
+  <panel name="p_bottombar" />
+  <panel name="p_centerbar960" />
+  <panel name="p_color_labels" />
+  <widget source="Title" render="Label" position="15,6" size="900,50" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+  <widget name="list" position="30,75" size="900,920" itemHeight="40" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" backgroundColor="background" transparent="1" />
+  <widget source="key_red" render="Label" position="15,1037" size="280,37" zPosition="1" font="Regular; 26" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" valign="bottom" />
+  <widget source="key_green" render="Label" position="310,1037" size="280,37" zPosition="1" font="Regular; 26" halign="left" foregroundColor="foreground3" backgroundColor="background2" transparent="1" valign="bottom" />
+  <widget source="key_yellow" render="Label" position="605,1037" size="280,37" zPosition="1" font="Regular; 26" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" valign="bottom" />
+  <widget source="key_blue" render="Label" position="900,1037" size="280,37" zPosition="1" font="Regular; 26" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" valign="bottom" />
+  <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+  <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
+  <eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+</screen>
+
   <!-- Plugins -->
   <!-- AspectRatioSwitchSetup -->
   <screen name="AspectRatioSwitchSetup" position="0,0" size="1920,1080" title="AspectRatioSwitch Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -6569,7 +6622,7 @@ self['config'].l.setSeperation(400)
   </screen>
   
   <!-- AtileHD -->
-<screen name="AtileHD_About" backgroundColor="background" position="660,310" size="600,250" title="iFlatFHD_v5.4">
+<screen name="AtileHD_About" backgroundColor="background" position="660,310" size="600,250" title="iFlatFHD_v5.6">
   <eLabel text="(c)2015 - 2017 skin by Nathanael" position="199,54" size="350,90" font="Regular;24" backgroundColor="background" foregroundColor="foreground" halign="center" />
   <eLabel text="support by - gordon55" backgroundColor="background" foregroundColor="foreground" position="199,147" size="350,50" font="Regular; 22" halign="center" />
   <ePixmap alphatest="blend" pixmap="iFlatFHD/icons/nathanael.png" position="54,63" size="120,120" transparent="1" zPosition="5" />
@@ -7813,7 +7866,7 @@ self['config'].l.setSeperation(400)
     <widget source="label" render="Label" position="125,35" size="640,80" font="Regular; 34" transparent="1" />
   </screen>
   
-  <!-- Foreca -->
+  <!-- Foreca_3.1.7 -->
   <screen name="ForecaPreview" position="0,0" size="1920,1080" title="Foreca Weather Forecast" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="dateclock" />
     <panel name="p_topbar" />
@@ -7822,17 +7875,15 @@ self['config'].l.setSeperation(400)
     <panel name="p_color_labels" />
     <widget source="Titel" render="Label" position="15,6" size="1300,50" backgroundColor="background2" font="Regular; 42" halign="left" foregroundColor="foreground3" transparent="1" zPosition="3" />
     <widget source="Titel2" render="Label" position="15,6" size="1300,50" backgroundColor="background2" font="Regular; 42" halign="left" foregroundColor="foreground3" transparent="1" zPosition="2" />
-    <widget name="MainList" position="30,90" size="900,900" backgroundColor="background" foregroundColor="foreground" foregroundColorSelected="selectionbarforeground" backgroundColorSelected="selectionbarbackground" itemHeight="100" font0="Regular;26" font1="Regular;24" font2="Regular;26" font3="Regular;26" setTime="0,34,80,32" setPict="80,15,70,70" setPictScale="0" setTemp="155,14,90,32" setTempUnits="155,55,90,32" setWindPict="245,35,35,35" setWindPictScale="1" setWind="275,14,95,32" setWindUnits="275,54,120,32" text1Pos="400,4,500,32" text2Pos="400,35,500,32" text3Pos="400,66,500,32" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" />
+    <widget name="MainList" position="30,90" size="900,903" backgroundColor="background" foregroundColor="foreground" foregroundColorSelected="selectionbarforeground" backgroundColorSelected="selectionbarbackground" itemHeight="129" font0="Regular;26" font1="Regular;24" font2="Regular;26" font3="Regular;26" setTime="0,34,80,32" setPict="80,15,70,70" setPictScale="0" setTemp="155,14,90,32" setTempUnits="155,55,90,32" setWindPict="245,35,35,35" setWindPictScale="1" setWind="275,14,95,32" setWindUnits="275,54,120,32" text1Pos="400,4,500,32" text2Pos="400,35,500,32" text3Pos="400,66,500,32" text4Pos="400,97,500,32" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" />
     <eLabel name="separator" position="30,90" size="900,1" backgroundColor="accent1" />
-    <eLabel name="separator" position="30,190" size="900,1" backgroundColor="accent1" />
-    <eLabel name="separator" position="30,290" size="900,1" backgroundColor="accent1" />
-    <eLabel name="separator" position="30,390" size="900,1" backgroundColor="accent1" />
-    <eLabel name="separator" position="30,490" size="900,1" backgroundColor="accent1" />
-    <eLabel name="separator" position="30,590" size="900,1" backgroundColor="accent1" />
-    <eLabel name="separator" position="30,690" size="900,1" backgroundColor="accent1" />
-    <eLabel name="separator" position="30,790" size="900,1" backgroundColor="accent1" />
-    <eLabel name="separator" position="30,890" size="900,1" backgroundColor="accent1" />
-    <eLabel name="separator" position="30,990" size="900,1" backgroundColor="accent1" />
+    <eLabel name="separator" position="30,219" size="900,1" backgroundColor="accent1" />
+    <eLabel name="separator" position="30,348" size="900,1" backgroundColor="accent1" />
+    <eLabel name="separator" position="30,477" size="900,1" backgroundColor="accent1" />
+    <eLabel name="separator" position="30,606" size="900,1" backgroundColor="accent1" />
+    <eLabel name="separator" position="30,735" size="900,1" backgroundColor="accent1" />
+    <eLabel name="separator" position="30,864" size="900,1" backgroundColor="accent1" />
+    <eLabel name="separator" position="30,993" size="900,1" backgroundColor="accent1" />
     <widget source="key_red" render="Label" position="15,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget source="key_green" render="Label" position="310,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget source="key_yellow" render="Label" position="605,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
@@ -7858,6 +7909,8 @@ self['config'].l.setSeperation(400)
     <widget source="key_green" render="Label" position="310,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget source="key_yellow" render="Label" position="605,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget source="key_blue" render="Label" position="900,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <eLabel name="button exit" position="1690,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button exit bg" position="1689,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
     <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
     <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
     <eLabel name="button help" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="HELP" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
@@ -7883,6 +7936,8 @@ self['config'].l.setSeperation(400)
     <eLabel name="separator" position="30,680" size="900,1" backgroundColor="accent1" />
     <eLabel name="separator" position="30,825" size="900,1" backgroundColor="accent1" />
     <eLabel name="separator" position="30,970" size="900,1" backgroundColor="accent1" />
+    <eLabel name="button exit" position="1690,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button exit bg" position="1689,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
     <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
     <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
     <eLabel name="button help" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="HELP" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
@@ -7904,6 +7959,8 @@ self['config'].l.setSeperation(400)
     <eLabel name="separator" position="30,680" size="900,1" backgroundColor="accent1" />
     <eLabel name="separator" position="30,825" size="900,1" backgroundColor="accent1" />
     <eLabel name="separator" position="30,970" size="900,1" backgroundColor="accent1" />
+    <eLabel name="button exit" position="1690,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button exit bg" position="1689,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
     <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
     <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
     <eLabel name="button help" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="HELP" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
@@ -7920,6 +7977,8 @@ self['config'].l.setSeperation(400)
     <widget name="Mlist" position="30,90" size="900,920" backgroundColor="background" foregroundColor="foreground" itemHeight="40" font="Regular;28" secondfont="Regular;28" backgroundColorSelected="selectionbarbackground" enableWrapAround="1" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" transparent="1" />
     <widget source="key_red" render="Label" position="15,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget source="key_green" render="Label" position="310,1037" size="280,36" zPosition="1" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+    <eLabel name="button exit" position="1690,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
+    <eLabel name="button exit bg" position="1689,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
     <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
     <eLabel name="button OK bg" position="1765,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
     <eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />

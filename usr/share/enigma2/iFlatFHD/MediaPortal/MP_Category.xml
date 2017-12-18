@@ -1,0 +1,15 @@
+<!-- category_selector -->
+<screen name="CategorySelector" position="center,center" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+  <widget name="F1" position="441,197" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F2" position="441,245" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F3" position="441,293" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F4" position="441,341" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F5" position="441,389" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F6" position="441,437" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F7" position="441,485" size="390,38" transparent="1" font="Regular; 21" valign="center" halign="center" backgroundColor="black" foregroundColor="white" zPosition="2" />
+  <widget name="F8" position="441,533" size="390,38" transparent="1" font="Regular; 21" backgroundColor="black" foregroundColor="white" valign="center" halign="center" zPosition="2" />  
+  <eLabel name="DB" position="410,140" backgroundColor="background2" size="460,5" />
+  <eLabel name="DB" position="410,615" backgroundColor="background2" size="460,5" />
+  <eLabel name="DB" position="410,145" backgroundColor="background2" size="5,470" />
+  <eLabel name="DB" position="865,145" backgroundColor="background2" size="5,470" />
+  <eLabel name="DB" position="415,145" size="450,470" />
