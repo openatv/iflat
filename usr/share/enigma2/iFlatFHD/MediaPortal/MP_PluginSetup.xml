@@ -4,7 +4,7 @@
   <panel name="p_bottombar" />
   <panel name="p_centerbar960" />
   <panel name="p_color_labels" />
-  <widget name="title" render="Label" position="15,6" size="900,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
+  <widget name="title" position="15,6" size="900,50" font="Regular; 42" backgroundColor="background2" transparent="1" foregroundColor="foreground3" />
   <widget name="F4" position="900,1037" size="280,36" transparent="1" font="Regular; 26" backgroundColor="background2" foregroundColor="foreground3" valign="center" halign="center" zPosition="1" />
   <widget name="config" font="Regular;28" secondfont="Regular;28" itemHeight="40" position="30,75" size="900,920" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" />
   <eLabel name="button OK" position="1766,1036" size="60,30" backgroundColor="button_mbgc" text="OK" font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />

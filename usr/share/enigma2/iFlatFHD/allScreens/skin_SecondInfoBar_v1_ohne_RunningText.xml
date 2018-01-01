@@ -2,11 +2,14 @@
 
 <!-- SecondInfoBar_ohne_RunningText_quer -->
 <screen backgroundColor="transparent" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1920,1080" title="InfoBar">
-    <panel name="dateclock" />
-    <panel name="p_topbar" />
-    <panel name="p_bottombar" />
-    <panel name="p_centerbar1920" />
-    <panel name="960_61_1_958" />
+	<panel name="dateclock" />
+	<panel name="p_topbar" />
+	<panel name="p_bottombar" />
+	<panel name="p_centerbar1920" />
+	<panel name="960_61_1_958" />
+	
+  <panel name="SIB_Tuner" />
+
   <widget backgroundColor="background" font="Regular;27" halign="left" position="30,975" render="Label" size="90,30" source="session.Event_Now" transparent="1" valign="center" zPosition="1">
     <convert type="EventTime">StartTime</convert>
     <convert type="ClockToText">Default</convert>
@@ -47,34 +50,12 @@
     <convert type="EventName">FullDescription</convert>
   </widget>
   <eLabel backgroundColor="background" font="Regular;27" halign="center" position="1070,975" size="10,30" text="-" transparent="1" zPosition="1" />
-  <eLabel backgroundColor="background2" font="Regular;24" halign="right" position="147,1038" size="80,30" text="Tuner" transparent="1" zPosition="1" foregroundColor="foreground3" valign="top" />
   <!--/*Picon-->
   <widget alphatest="blend" position="30,1022" render="Picon" size="95,57" source="session.CurrentService" transparent="1" zPosition="1">
     <convert type="ServiceName">Reference</convert>
   </widget>
   <!--Picon*/-->
-  <!--/*Tuner-->
-  <widget backgroundColor="background2" font="Regular;24" halign="center" position="234,1038" render="FixedLabel" size="25,30" source="session.TunerInfo" text="A" transparent="1" valign="top" zPosition="2" foregroundColor="foreground3">
-    <convert type="TunerInfo">TunerUseMask</convert>
-    <convert type="ValueBitTest">1</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget backgroundColor="background2" font="Regular;24" halign="center" position="259,1038" render="FixedLabel" size="25,30" source="session.TunerInfo" text="B" transparent="1" valign="top" zPosition="2" foregroundColor="foreground3">
-    <convert type="TunerInfo">TunerUseMask</convert>
-    <convert type="ValueBitTest">2</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget backgroundColor="background2" font="Regular;24" halign="center" position="284,1038" render="FixedLabel" size="25,30" source="session.TunerInfo" text="C" transparent="1" valign="top" zPosition="2" foregroundColor="foreground3">
-    <convert type="TunerInfo">TunerUseMask</convert>
-    <convert type="ValueBitTest">4</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <widget backgroundColor="background2" font="Regular;24" halign="center" position="309,1038" render="FixedLabel" size="25,30" source="session.TunerInfo" text="D" transparent="1" valign="top" zPosition="2" foregroundColor="foreground3">
-    <convert type="TunerInfo">TunerUseMask</convert>
-    <convert type="ValueBitTest">8</convert>
-    <convert type="ConditionalShowHide" />
-  </widget>
-  <!-- Tuner*/-->
+
   <!--/*TempFan-->
   <widget backgroundColor="background2" font="Regular;24" halign="right" noWrap="1" position="1114,1038" render="Label" size="180,30" source="session.CurrentService" text="Fan:" transparent="1" valign="top" zPosition="5" foregroundColor="foreground3">
     <convert type="VtiInfo">FanInfo</convert>
@@ -90,15 +71,14 @@
   <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="left" noWrap="1" position="162,18" render="Label" size="760,37" source="session.CurrentService" transparent="1" valign="center" zPosition="50">
     <convert type="VtiInfo">EcmInfo</convert>
   </widget>
-  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular;24" halign="right" position="373,1038" render="Label" size="80,30" source="session.CurrentService" transparent="1" zPosition="1" valign="top">
-    <convert type="ServiceInfo">VideoWidth</convert>
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular; 26" halign="left" noWrap="1" position="162,18" render="Label" size="760,37" source="session.CurrentService" transparent="1" valign="center" zPosition="50">
+    <convert type="VtiInfo">EcmInfo</convert>
   </widget>
-  <eLabel backgroundColor="background2" foregroundColor="foreground3" font="Regular;24" halign="center" position="453,1038" size="15,30" text="x" transparent="1" zPosition="1" valign="top" />
-  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular;24" halign="left" position="468,1038" render="Label" size="70,30" source="session.CurrentService" transparent="1" zPosition="1" valign="top">
-    <convert type="ServiceInfo">VideoHeight</convert>
+  <widget source="session.CurrentService" position="400,1038" size="200,30" render="Label" font="Regular; 24" halign="center" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1">
+    <convert type="iFlatServiceInfoEX">vsize</convert>
   </widget>
-  <eLabel backgroundColor="background2" foregroundColor="foreground3" font="Regular;24" halign="right" noWrap="1" position="608,1038" size="80,30" text="SNR" transparent="1" zPosition="1" valign="top" />
-  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular;24" halign="left" noWrap="1" position="698,1038" render="Label" size="100,30" source="session.FrontendStatus" transparent="1" zPosition="1" valign="top">
+  <eLabel backgroundColor="background2" foregroundColor="foreground3" font="Regular;24" halign="right" noWrap="1" position="650,1038" size="80,30" text="SNR" transparent="1" zPosition="1" valign="top" />
+  <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular;24" halign="left" noWrap="1" position="740,1038" render="Label" size="100,30" source="session.FrontendStatus" transparent="1" zPosition="1" valign="top">
     <convert type="FrontendInfo">SNR</convert>
   </widget>
   <widget backgroundColor="background2" foregroundColor="foreground3" font="Regular;24" halign="center" noWrap="1" position="894,1038" render="Label" size="150,30" source="session.CurrentService" text="Temp:" transparent="1" valign="top" zPosition="1">

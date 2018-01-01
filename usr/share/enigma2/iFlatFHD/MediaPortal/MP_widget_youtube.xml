@@ -5,7 +5,7 @@
   <widget name="time" position="1550,651" size="300,32" backgroundColor="background" transparent="1" font="Regular; 25" />
   <widget name="Metalang" position="1280,688" size="250,32" backgroundColor="background" transparent="1" font="Regular; 25" halign="right" />
   <widget name="metalang" position="1550,688" size="300,32" backgroundColor="background" transparent="1" font="Regular; 25" />
-  <widget name="3D" position="1280,725" size="250,32" backgroundColor="background" transparent="1" font="Regular;30" halign="right" />
+  <widget name="3D" position="1280,725" size="250,32" backgroundColor="background" transparent="1" font="Regular;25" halign="right" />
   <widget name="3d" position="1550,725" size="300,32" backgroundColor="background" transparent="1" font="Regular; 25" />
   <widget name="Author" position="1280,762" size="250,32" backgroundColor="background" transparent="1" font="Regular; 25" halign="right" />
   <widget name="author" position="1550,762" size="300,32" backgroundColor="background" transparent="1" font="Regular; 25" noWrap="1" />
