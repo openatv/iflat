@@ -107,7 +107,7 @@
     <widget name="coverArt" position="1442,435" size="280,280" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/no_coverArt.png" zPosition="7" transparent="1" alphatest="blend" />
     <!-- 0: black (no) 1: mp3 2: flac 3: saved file : 4: chartlyrics -->
     <widget name="providedby" position="1285,822" size="320,35" font="Regular; 28" zPosition="5" backgroundColor="background" transparent="1" valign="center" halign="left" foregroundColor="grey" />
-    <widget name="provider" position="1610,822" size="160,60" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/black.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_mp3.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_flac.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_file.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_chartlyrics.png" zPosition="5" transparent="0" alphatest="blend" />
+    <widget name="provider" position="1610,822" size="160,60" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/black.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_mp3.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_flac.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_file.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_chartlyrics.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_genius.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_mp4.png" zPosition="5" transparent="0" alphatest="blend" />
     <!-- 0: black (no) 1: mp3 2: flac 3: mucic dir : 4: music dir albumcover.* 5: google -->
     <widget name="cprovidedby" position="1285,930" size="320,35" font="Regular; 28" zPosition="5" backgroundColor="background" transparent="1" valign="center" halign="left" foregroundColor="grey" />
     <widget name="cprovider" position="1610,928" size="160,60" pixmaps="/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/black.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_mp3.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_flac.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_file.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_filealbum.png,/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/prov_google.png" zPosition="5" transparent="0" alphatest="blend" />
@@ -153,7 +153,7 @@
 <eLabel name="line_s" position="0,877" size="1920,1" zPosition="5" backgroundColor="line_s" />
 <eLabel name="IB" position="0,875" size="1920,143" zPosition="-10" backgroundColor="background" />
     <widget name="coverArt" position="30,579" size="280,280" zPosition="7" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/YampMusicPlayer/skins/fhd/no_videocoverArt.png" transparent="1" alphatest="blend" />
-    <eLabel name="player_progress_bg" backgroundColor="player_progress_bg" position="151,959" size="1170,1" />	
+    <eLabel name="player_progress_bg" backgroundColor="progress_bg" position="151,959" size="1170,1" zPosition="-1" />	
     <eLabel foregroundColor="foreground" backgroundColor="background" font="Regular; 29" halign="left" position="1827,943" size="80,33" text="min" transparent="1" valign="top" />
     <widget name="songtitle" position="30,883" size="1405,55" zPosition="7" backgroundColor="background" transparent="1" font="Regular; 45" halign="left" valign="center" noWrap="1" />
     <widget source="session.CurrentService" render="Label" position="1677,943" size="150,33" zPosition="7" backgroundColor="background" font="Regular; 29" valign="top" halign="right" transparent="1">
@@ -163,7 +163,7 @@
     <widget name="bitrate" position="1681,886" size="200,33" zPosition="7" backgroundColor="background" transparent="1" font="Regular; 28" halign="right" valign="top" />
 <widget name="nextsong" position="30,1032" size="168,38" zPosition="7" backgroundColor="background2" transparent="2" foregroundColor="foreground3" font="Regular;26" halign="top" valign="center" noWrap="1" />
  <widget name="nextsongtitle" position="218,1032" size="1215,38" zPosition="7" backgroundColor="background2" transparent="1" foregroundColor="foreground3" font="Regular;26" halign="top" valign="center" noWrap="1" />
-    <widget source="session.CurrentService" render="Progress" position="151,957" size="1170,5" zPosition="7" backgroundColor="background" foregroundColor="progress" transparent="1">
+    <widget source="session.CurrentService" render="Progress" position="151,957" size="1170,5" zPosition="1" backgroundColor="background" foregroundColor="progress" transparent="1">
         <convert type="ServicePosition">Position</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="30,943" zPosition="7" size="100,33" backgroundColor="background" transparent="1" foregroundColor="grey" font="Regular; 29" valign="top" halign="left">

@@ -164,6 +164,9 @@
 		<screen name="0_880_960_1">
 			<ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/white/line_h.png" position="0,880" size="960,1" zPosition="5" scale="1"/>
 		</screen>
+		<screen name="0_887_1300_1">
+			<ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/white/line_h.png" position="0,887" size="1300,1" zPosition="5" scale="1"/>
+		</screen>		
 		<screen name="0_890_1200_1">
 			<ePixmap alphatest="blend" pixmap="iFlatFHD/line_s/white/line_h.png" position="0,890" size="1200,1" zPosition="5" scale="1"/>
 		</screen>
