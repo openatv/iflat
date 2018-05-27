@@ -5,11 +5,11 @@
 
   
 <!-- /* Wetter -->
-<widget source="session.CurrentService" render="Picon" path="iFlatFHD/pic/weather" position="1755,1024" size="58,58" zPosition="1" transparent="1" alphatest="blend">
-      <convert type="iFlatVWeather2">currentWeatherPicon</convert>
+<widget source="session.MSNWeather" render="MSNWeatherPixmap" path="/usr/share/enigma2/iFlatFHD/pic/weather/,png" position="1755,1024" size="58,58" zPosition="1" transparent="1" alphatest="blend">
+      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/iFlatFHD/pic/weather/,png</convert>
     </widget>
-<widget source="session.CurrentService" render="Label" position="1829,1036" size="100,30" font="Regular; 27" zPosition="1" halign="left" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
-      <convert type="iFlatVWeather2">currentWeatherTemp</convert>
+<widget source="session.MSNWeather" render="Label" position="1829,1036" size="100,30" font="Regular; 27" zPosition="1" halign="left" valign="top" foregroundColor="foreground3" backgroundColor="background2" transparent="1" noWrap="1">
+      <convert type="MSNWeather">temperature_current</convert>
     </widget>
 <!-- Wetter */-->
     
