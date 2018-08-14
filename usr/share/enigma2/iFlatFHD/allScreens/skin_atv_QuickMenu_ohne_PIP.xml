@@ -1,0 +1,18 @@
+<skin>
+	<screen name="QuickMenu" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="dateclock" />
+		<panel name="p_topbar" />
+		<panel name="p_bottombar" />
+		<panel name="p_centerbar1300" />
+		<panel name="p_color_labels" />
+		<eLabel name="line_s" position="0,860" size="1300,1" zPosition="5" backgroundColor="line_s"/>
+		<eLabel text="Quick	Launch Menu" position="65,12" size="800,43" font="Regular;35" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget name="list" position="53,99" size="529,675" backgroundColor="background" itemHeight="70" transparent="1" />
+		<widget name="sublist" position="640,101" size="600,672" backgroundColor="background" itemHeight="70" />
+		<widget name="description" position="50,915" size="1200,101" zPosition="1" font="Regular; 32" halign="center" backgroundColor="background" transparent="1" />
+		<widget name="key_red" position="84,1035" size="240,30" zPosition="1" font="Regular; 25" halign="left" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget name="key_green" position="408,1037" size="240,30" zPosition="1" font="Regular; 25" halign="left" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget name="key_yellow" position="700,1037" size="240,30" zPosition="1" font="Regular; 25" halign="left" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+		<widget name="key_blue" position="1184,1037" size="260,24" zPosition="1" font="Regular; 25" halign="left" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
+	</screen>
+</skin>
