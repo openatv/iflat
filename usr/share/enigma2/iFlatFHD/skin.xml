@@ -4192,7 +4192,12 @@ self.instance.resize(eSize(*wsize))
     <eLabel name="button ext" position="1843,1036" size="60,30" backgroundColor="button_mbgc" text="EXIT " font="Regular; 17" foregroundColor="button_mfgc" halign="center" valign="center" zPosition="1" />
     <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
   </screen>
-  
+
+  <screen name="RecordTimerQuestion" position="0,0" size="700,100" zPosition="99" flags="wfNoBorder" backgroundColor="background2">
+    <eLabel position="1,1" zPosition="0" size="698,98" backgroundColor="background" />
+    <widget name="list" backgroundColor="background" foregroundColor="foreground" position="10,10" zPosition="1" size="680,80" itemHeight="40" font="Regular;28" secondfont="Regular;28" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" />
+  </screen>
+
   <screen name="TimerLog" position="0,0" size="1920,1080" title="Timer log" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="dateclock" />
     <panel name="p_topbar" />
