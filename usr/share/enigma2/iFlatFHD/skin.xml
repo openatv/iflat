@@ -2601,6 +2601,9 @@ self.instance.resize(eSize(*wsize))
     <eLabel name="button ext" position="1843,1036" size="60,30" text="EXIT " font="Regular; 17" halign="center" valign="center" foregroundColor="button_mfgc" backgroundColor="button_mbgc" zPosition="1" />
     <eLabel name="button exit bg" position="1842,1035" size="62,32" backgroundColor="button_mbg" zPosition="0" />
   </screen>
+  <screen name="EventViewSimple" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder" title="EventView">
+    <panel name="EventView" />
+  </screen>
   
 <screen name="EPGSearch" position="0,0" size="1920,1080" title="EPGSearch" backgroundColor="transparent" flags="wfNoBorder">
   <panel name="dateclock" />
@@ -4161,10 +4164,10 @@ self.instance.resize(eSize(*wsize))
     <panel name="dateclock" />
     <panel name="p_topbar" />
     <panel name="p_bottombar" />
-    <panel name="p_centerbar1920" />
+    <panel name="p_centerbar1300" />
     <panel name="p_color_labels" />
-		<panel name="TimerEdit_rechts" />
-		<panel name="1242_61_1_958" />
+		<!--panel name="TimerEdit_rechts" />
+		<panel name="1242_61_1_958" /-->
 		<widget source="Title" position="15,6" size="1000,50" render="Label" font="Regular; 42" halign="left" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
 		<widget name="timerlist" position="30,75" size="1200,900" itemHeight="100" font="Regular;26" foregroundColor="foreground" backgroundColor="background" transparent="1" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" />
 		<widget name="key_red" position="15,1037" size="280,36" font="Regular; 26" halign="center" valign="bottom" foregroundColor="foreground3" backgroundColor="background2" transparent="1" zPosition="1" />
@@ -7010,7 +7013,7 @@ self['config'].l.setSeperation(400)
     <panel name="p_centerbar1200" />
     <panel name="p_color_labels" />
     <widget source="Title" render="Label" position="15,6" size="1140,50" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
-    <widget name="entries" backgroundColor="background" foregroundColor="foreground" position="30,75" size="1140,920" itemHeight="40" font="Regular; 28" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" />
+    <widget name="entries" backgroundColor="background" foregroundColor="foreground" position="30,75" size="1140,920" itemHeight="100" font="Regular; 28" scrollbarMode="showOnDemand" scrollbarWidth="3" scrollbarSliderForegroundColor="scrollbarsfgc" scrollbarSliderBorderColor="scrollbarsbgc" scrollbarSliderBorderWidth="0" enableWrapAround="1" transparent="1" />
     <widget source="key_green" render="Label" position="310,1037" size="280,36" zPosition="1" font="Regular;26" valign="bottom" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget source="key_yellow" render="Label" position="605,1037" size="280,36" zPosition="1" font="Regular;26" valign="bottom" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget source="key_blue" render="Label" position="900,1037" size="280,36" zPosition="1" font="Regular;26" valign="bottom" halign="center" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
@@ -7635,7 +7638,7 @@ self['config'].l.setSeperation(400)
     <eLabel position="15,6" size="900,50" text="EMC - Enhanced Movie Center" font="Regular; 42" foregroundColor="foreground3" backgroundColor="background2" transparent="1" />
     <widget source="Title" position="30,75" size="1200,40" render="Label" font="Regular; 28" halign="left" foregroundColor="foreground" backgroundColor="background" transparent="1" />
     <widget name="list" position="30,125" size="1200,725" itemHeight="38" transparent="1" foregroundColor="foreground" backgroundColor="background" 
-			CoolFont="Regular;28" CoolSelectFont="Regular;28" CoolMovieHPos="2" CoolDateFont="Regular;26" CoolIconHPos="6" CoolBarHPos="14" CoolBarPos="45" 
+			CoolFont="Regular;28" CoolSelectFont="Regular;28" CoolMovieHPos="2" CoolDateFont="Regular;26" CoolIconSize="48,40" CoolIconHPos="0" CoolBarHPos="16" CoolBarPos="58" 
 			CoolBarSize="40,7" CoolBarSizeSa="60,13" CoolProgressPos="1500" CoolDateColor="1" CoolDatePos="975" CoolDateHPos="3" CoolDateWidth="220" 
 			CoolFolderSize="1010" CoolMoviePos="130" CoolMovieSize="830" CoolHighlightColor="0" CoolTitleColor="1" DefaultColor="foreground" BackColor="background" 
 			FrontColorSel="selectionbarforeground" BackColorSel="selectionbarbackground" UnwatchedColor="movie_unwatched" WatchingColor="movie_watching" 
