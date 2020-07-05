@@ -181,7 +181,7 @@ class iFlatServiceInfoEX(Poll, Converter, object):
 		
 	@cached
 	def getText(self):
-		self.stream = { 'apid':"N/A", 'vpid':"N/A", 'sid':"N/A", 'onid':"N/A", 'tsid':"N/A", 'prcpid':"N/A", 'caids':"FTA", 'pmtpid':"N/A", 'txtpid':"N/A", 'xres':"", 'yres':"", 'atype':"", 'vtype':"", 'avtype':"", 'fps':"", 'tbps':"", 'ttype':"",}
+		self.stream = { 'apid': "N/A", 'vpid': "N/A", 'sid': "N/A", 'onid': "N/A", 'tsid': "N/A", 'prcpid': "N/A", 'caids': "FTA", 'pmtpid': "N/A", 'txtpid': "N/A", 'xres': "", 'yres': "", 'atype': "", 'vtype': "", 'avtype': "", 'fps': "", 'tbps': "", 'ttype': "",}
 		streaminfo = ""
 		array_caids = []
 		service = self.source.service
@@ -216,7 +216,7 @@ class iFlatServiceInfoEX(Poll, Converter, object):
 		audio = service.audioTracks()
 		if audio:
 			if audio.getCurrentTrack() > -1:
-				self.stream['atype'] = str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription()).replace(",","")
+				self.stream['atype'] = str(audio.getTrackInfo(audio.getCurrentTrack()).getDescription()).replace(",", "")
 		self.stream['vtype'] = ("MPEG2", "H.264", "MPEG1", "MPEG4-II", "VC1", "VC1-SM", "HEVC", "")[info.getInfo(iServiceInformation.sVideoType)]
 
 		# print "[iFlatServiceInfoEX, video type : ", info.getInfo(iServiceInformation.sVideoType), self.stream['vtype']
@@ -231,7 +231,7 @@ class iFlatServiceInfoEX(Poll, Converter, object):
 		if self.tpdata:
 			self.stream['ttype'] = self.tpdata.get('tuner_type', '')
 			if self.stream['ttype'] == 'DVB-S' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 1:
+				if self.tpdata.get('system', 0) == 1:
 					self.stream['ttype'] = 'DVB-S2'
 		else:
 			self.stream['ttype'] = 'IP-TV'
@@ -372,11 +372,11 @@ class iFlatServiceInfoEX(Poll, Converter, object):
 				return True
 		elif self.type == self.IS_SATELLITE_S:
 			if type == 'DVB-S' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 0:
+				if self.tpdata.get('system', 0) == 0:
 					return True
 		elif self.type == self.IS_SATELLITE_S2:
 			if type == 'DVB-S' and service.streamed() is None:
-				if self.tpdata.get('system', 0) is 1:
+				if self.tpdata.get('system', 0) == 1:
 					return True
 		return False
 	boolean = property(getBoolean)
